@@ -1,0 +1,1 @@
+export const OTP_SLOTS = 6;
