@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -6,24 +8,38 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useRouter } from "next/navigation";
 
 export default function PersonalityType() {
+  const router = useRouter();
+
+  const handleChange = (value: string) => {
+    router.push(`/new-profile`);
+  };
+
+  const options = [
+    { value: "artist", label: "Artist" },
+    { value: "teacher", label: "Teacher" },
+    { value: "footballer", label: "Footballer" },
+    { value: "trader", label: "Trader" },
+  ];
   return (
     <>
       <h2 className="text-dark-500 text-2xl text-center font-medium mb-10">
         What best describes you
       </h2>
 
-      <Select>
-        <SelectTrigger className="w-full">
+      <Select onValueChange={handleChange}>
+        <SelectTrigger className="h-10 w-full">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectItem value="artist">Artist</SelectItem>
-            <SelectItem value="teacher">Teacher</SelectItem>
-            <SelectItem value="footballer">Footballer</SelectItem>
-            <SelectItem value="trader">Trader</SelectItem>
+            {options.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
           </SelectGroup>
         </SelectContent>
       </Select>

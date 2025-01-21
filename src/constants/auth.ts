@@ -1,1 +1,1 @@
-export const OTP_SLOTS = 6;
+export const OTP_SLOTS = 6;;

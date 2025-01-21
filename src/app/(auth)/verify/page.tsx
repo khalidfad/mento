@@ -1,3 +1,5 @@
+"use client";
+
 import {
   InputOTP,
   InputOTPGroup,
@@ -5,8 +7,15 @@ import {
 } from "@/components/ui/input-otp";
 import { OTP_SLOTS } from "@/constants/auth";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Verify() {
+  const router = useRouter();
+  const handleOTP = (otp: string) => {
+    if (otp.length === OTP_SLOTS) {
+      router.push("/sign-up/personality-type");
+    }
+  };
   return (
     <>
       <h1 className="text-dark-600 text-4xl text-center font-bold mb-2">
@@ -27,7 +36,7 @@ export default function Verify() {
           className="m-auto"
         />
       </div>
-      <InputOTP maxLength={OTP_SLOTS}>
+      <InputOTP maxLength={OTP_SLOTS} onChange={handleOTP}>
         <InputOTPGroup className="mx-auto">
           {Array.from({ length: OTP_SLOTS }).map((_, i) => (
             <InputOTPSlot key={i} index={i} />
