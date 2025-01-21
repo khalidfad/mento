@@ -24,7 +24,7 @@ export default function Home() {
         <div>
           <div className="max-w-[263px] md:max-w-sm mb-14">
             <h1 className="text-3xl leading-10 text-white mb-6">
-              The world's largest community of{" "}
+              The world&apos;s largest community of{" "}
               <span className="font-bold">Mentors</span>
             </h1>
             <p className="text-white">

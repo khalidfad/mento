@@ -14,6 +14,7 @@ export default function PersonalityType() {
   const router = useRouter();
 
   const handleChange = (value: string) => {
+    console.log(value);
     router.push(`/new-profile`);
   };
 
