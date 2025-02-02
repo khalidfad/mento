@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
 
+// TODO: Revert dir back to [id] folder once API is ready
+// Using /adebimpe as a placeholder for now, to bypass NextJS  generateStaticParams() build error
+
 export default function MentorPage() {
   const mentor = {
     name: "Adebimpe Ajayi",
