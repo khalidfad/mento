@@ -1,5 +1,6 @@
 import { BadgeCheckIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface MentorCardProps {
   id: number;
@@ -7,13 +8,14 @@ interface MentorCardProps {
   image: string;
   bio: string;
   isVerified: boolean;
+  link: string;
 }
 
 export default function MentorCard(props: MentorCardProps) {
-  const { name, image, bio, isVerified } = props;
+  const { name, image, bio, isVerified, link } = props;
 
   return (
-    <div className="flex flex-col cursor-pointer shrink-0 group">
+    <Link href={link} className="flex flex-col cursor-pointer shrink-0 group">
       <Image
         src={image}
         alt={name}
@@ -28,6 +30,6 @@ export default function MentorCard(props: MentorCardProps) {
         )}
       </div>
       <p className="text-base text-dark-500 font-light">{bio}</p>
-    </div>
+    </Link>
   );
 }

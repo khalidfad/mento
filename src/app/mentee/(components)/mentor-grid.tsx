@@ -8,6 +8,7 @@ export default function MentorGrid() {
       bio: "Founder of delight food, accountant with 7 years of experience",
       image: "/images/mentors/1.png",
       isVerified: true,
+      link: "/mentor/adebimpe",
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ export default function MentorGrid() {
       bio: "Principal founder of ash clothing and apparel for young millennials",
       image: "/images/mentors/2.png",
       isVerified: true,
+      link: "/mentor/adebimpe",
     },
     {
       id: 3,
@@ -22,6 +24,7 @@ export default function MentorGrid() {
       bio: "Founder of delight food, accountant with 7 years of experience",
       image: "/images/mentors/3.png",
       isVerified: true,
+      link: "/mentor/adebimpe",
     },
     {
       id: 4,
@@ -29,6 +32,7 @@ export default function MentorGrid() {
       bio: "Founder of delight food, accountant with 7 years of experience",
       image: "/images/mentors/4.png",
       isVerified: true,
+      link: "/mentor/adebimpe",
     },
     {
       id: 5,
@@ -36,6 +40,7 @@ export default function MentorGrid() {
       bio: "Founder of delight food, accountant with 7 years of experience",
       image: "/images/mentors/5.png",
       isVerified: true,
+      link: "/mentor/adebimpe",
     },
     {
       id: 6,
@@ -43,10 +48,11 @@ export default function MentorGrid() {
       bio: "Founder of delight food, accountant with 7 years of experience",
       image: "/images/mentors/6.png",
       isVerified: true,
+      link: "/mentor/adebimpe",
     },
   ];
   return (
-    <div className="grid grid-cols-2 gap-5">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
       <div className="col-span-full">
         <h2 className="text-xl font-medium text-dark-600 mb-3">
           Matched mentors
