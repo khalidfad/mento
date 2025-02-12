@@ -1,3 +1,4 @@
+import AppShell from "@/components/layouts/app-shell";
 import ProfileCard from "./(components)/profile-card";
 import ProfileSections from "./(components)/profile-sections";
 
@@ -18,11 +19,11 @@ export default function ProfilePage() {
     bio: "Lorem ipsum dolor sit amet consectetur. Proin diam mattis risus sodales viverra in amet ipsum. Ultrices vel pharetra adipiscing sed at massa aliquet et. Ac mauris mauris consectetur maecenas risus sed sit. Diam id dictumst condimentum tristique mi sit ut est.",
   };
   return (
-    <div>
+    <AppShell>
       <div className="mb-10">
         <ProfileCard {...profile} />
       </div>
       <ProfileSections {...sections} />
-    </div>
+    </AppShell>
   );
 }

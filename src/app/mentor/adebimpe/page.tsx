@@ -3,6 +3,7 @@ import DashboardTime from "@/components/core/dashboard-time";
 import Greeting from "@/components/core/greeting";
 import ProfileHeader from "@/components/core/profile-header";
 import ReviewCard from "@/components/core/review-card";
+import AppShell from "@/components/layouts/app-shell";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
@@ -56,7 +57,7 @@ export default function MentorPage() {
   ];
 
   return (
-    <>
+    <AppShell noContainer>
       <div className="container">
         <Greeting name="Oguntade" />
         <div className="mb-4">
@@ -81,6 +82,6 @@ export default function MentorPage() {
           </Link>
         </div>
       </div>
-    </>
+    </AppShell>
   );
 }

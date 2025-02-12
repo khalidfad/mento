@@ -21,7 +21,6 @@ const NewProfileFormProvider: React.FC<React.PropsWithChildren> = ({
   const [currentStep, setCurrentStep] = useState(1);
 
   const updateCurrentStep = (step: number) => {
-    console.log('fot here', step);
     if (step > 0 && step <= NEW_PROFILE_STEPS) {
       setCurrentStep(step);
     }
