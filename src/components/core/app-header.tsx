@@ -14,7 +14,11 @@ import AppMenu from "@/components/core/app-menu";
 import Hamburger from "@/components/icons/hamburger";
 import clsx from "clsx";
 
-export default function AppHeader({ addContainer }: { addContainer?: boolean }) {
+export default function AppHeader({
+  addContainer,
+}: {
+  addContainer?: boolean;
+}) {
   const { menuOpen, setMenuOpen } = useAppContext();
 
   return (
@@ -34,7 +38,10 @@ export default function AppHeader({ addContainer }: { addContainer?: boolean }) 
         <SheetTrigger>
           <Hamburger className="size-9 text-dark-600" />
         </SheetTrigger>
-        <SheetContent className="w-full sm:max-w-lg bg-black border-0" aria-describedby={undefined}>
+        <SheetContent
+          className="w-full sm:max-w-lg bg-black border-0"
+          aria-describedby={undefined}
+        >
           <SheetHeader>
             <SheetTitle className="sr-only"> Menu</SheetTitle>
 
